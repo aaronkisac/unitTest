@@ -1,0 +1,14 @@
+.page {
+  margin: 50px;
+  text-align: center;
+}
+.error {
+  margin: 50px;
+  color: red;
+}
+label,
+input,
+button {
+  margin: 20px;
+  font-size: 20px;
+}
