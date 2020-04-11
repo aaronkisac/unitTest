@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import "./Double.css";
 
-const Double = ({ initialNum = 11 }) => {
-  const calculateDouble = () => {
+const Double = ({ initialNum = 11, calculateDouble }) => {
+  
+  const [num, setNum] = useState(initialNum);
+  const [double, setDouble] = useState(num * 2);
+  const [error, setError] = useState("");
+  const [disabled, setDisabled] = useState(false);
+
+  const calculate = () => {
     console.log(num, double);
-    // API call
-    setDouble(num * 2);
+    const newDouble = calculateDouble(num);
+    setDouble(newDouble);
   };
+
   const handleOnChange = (e) => {
     if (e.target.value < 0 || e.target.value > 1000) {
       setError("Please type 0 to 100");
@@ -17,15 +24,11 @@ const Double = ({ initialNum = 11 }) => {
     }
   };
 
-  const [num, setNum] = useState(initialNum);
-  const [double, setDouble] = useState(num * 2);
-  const [error, setError] = useState("");
-  const [disabled, setDisabled] = useState(false);
 
   return (
     <div id="divDouble" className="page">
-      <h3 className="title1"> double it!  </h3>
-      <h3 className="title2"> don't get afraid!</h3>
+      <h5 className="title1"> unit test title1</h5>
+      <h5 className="title2"> unit test title2</h5>
       <div className="error">{error && <label>{error}</label>}</div>
       <input
         id="number"
@@ -33,7 +36,7 @@ const Double = ({ initialNum = 11 }) => {
         onChange={handleOnChange}
         defaultValue={num}
       />
-      <button onClick={calculateDouble} disabled={disabled}>
+      <button onClick={calculate} disabled={disabled}>
         Calculate
       </button>
       <div>

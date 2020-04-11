@@ -5,16 +5,16 @@ exports[`Double component Cases renders with render correctly 1`] = `
   className="page"
   id="divDouble"
 >
-  <h3
+  <h5
     className="title1"
   >
-     double it!  
-  </h3>
-  <h3
+     unit test title1
+  </h5>
+  <h5
     className="title2"
   >
-     don't get afraid!
-  </h3>
+     unit test title2
+  </h5>
   <div
     className="error"
   />
@@ -43,16 +43,54 @@ exports[`Double component Cases renders with shallow correctly 1`] = `
   className="page"
   id="divDouble"
 >
-  <h3
+  <h5
     className="title1"
   >
-     double it!  
-  </h3>
-  <h3
+     unit test title1
+  </h5>
+  <h5
     className="title2"
   >
-     don't get afraid!
-  </h3>
+     unit test title2
+  </h5>
+  <div
+    className="error"
+  />
+  <input
+    defaultValue={33}
+    id="number"
+    onChange={[Function]}
+    type="text"
+  />
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    Calculate
+  </button>
+  <div>
+    <label>
+      66
+    </label>
+  </div>
+</div>
+`;
+
+exports[`renders with shallow correctly 1`] = `
+<div
+  className="page"
+  id="divDouble"
+>
+  <h5
+    className="title1"
+  >
+     unit test title1
+  </h5>
+  <h5
+    className="title2"
+  >
+     unit test title2
+  </h5>
   <div
     className="error"
   />
